@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 node -v
-echo "Hello $REALM"
+echo "Hello $1"
 time=$(date)
 echo "::set-output name=time::$time"
