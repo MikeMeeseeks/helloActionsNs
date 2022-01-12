@@ -10,6 +10,8 @@ jobs:
         uses: MikeMeeseeks/helloActionsNs@main
         with:
           realm: ${{ secrets.REALM }}
+          token_id: ${{ secrets.TOKEN_ID }}
+          token_secret: ${{ secrets.TOKEN_SECRET }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"

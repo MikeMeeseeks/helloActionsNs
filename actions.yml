@@ -3,9 +3,15 @@ name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
   realm:  # id of input
-    description: 'Who to greet'
+    description: 'account id'
     required: true
     default: 'World'
+  token_id:  # id of input
+    description: 'token id'
+    required: true
+  token_secret:  # id of input
+    description: 'token secret'
+    required: true
 outputs:
   time: # id of output
     description: 'The time we greeted you'
