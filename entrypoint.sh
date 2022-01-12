@@ -13,4 +13,4 @@ pwd
 ls
 suitecloud account:savetoken --account $INPUT_REALM --authid helloWorld --tokenid $INPUT_TOKEN_ID --tokensecret $INPUT_TOKEN_SECRET
 
-suitecloud project:deploy -v
+suitecloud project:deploy --applyinstallprefs -v
