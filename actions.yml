@@ -12,5 +12,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ env.REALM }}
+  realm:
+    - ${{ secrets.REALM }}
