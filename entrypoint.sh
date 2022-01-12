@@ -5,7 +5,7 @@ time=$(date)
 echo "::set-output name=time::$time"
 echo "My Test $INPUT_REALM"
 pwd
-cd /usr/lib/node_modules/@oracle/suitecloud-cli 
+cd /usr/local/lib/node_modules/@oracle/suitecloud-cli
 npm install
 
 cd "/github/workspace"
