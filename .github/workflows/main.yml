@@ -8,8 +8,10 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: MikeMeeseeks/helloActionsNs@main
-        env:
-          realm: ${{ secrets.REALM }} 
+          with:
+            realm: ${{ secrets.REALM }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      #- name: Check
+       # run: MY_SECRET='' ./scripts/check.sh
