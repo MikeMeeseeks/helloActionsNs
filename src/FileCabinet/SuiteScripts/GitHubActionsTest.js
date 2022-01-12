@@ -17,7 +17,7 @@ function() {
      * @since 2015.2
      */
     function pageInit(scriptContext) {
-
+        // Demo just adding a comment
     }
 
     /**
