@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 node -v
 echo "Hello $REALM"
 time=$(date)

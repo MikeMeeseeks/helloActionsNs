@@ -10,6 +10,7 @@ jobs:
         uses: MikeMeeseeks/helloActionsNs@main
         with:
           who-to-greet: 'Mike is Testing'
+        env:
           realm: ${{ env.REALM }}
       # Use the output from the `hello` step
       - name: Get the output time
