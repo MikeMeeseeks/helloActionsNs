@@ -5,3 +5,5 @@ time=$(date)
 echo "::set-output name=time::$time"
 echo "My Test $INPUT_REALM"
 echo "Docker Build Complete"
+
+suitecloud 
