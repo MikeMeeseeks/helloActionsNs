@@ -18,6 +18,7 @@ function() {
      */
     function pageInit(scriptContext) {
         // Demo just adding a comment
+        // Demo 2 Files
     }
 
     /**
