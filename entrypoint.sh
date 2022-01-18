@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 node -v
-time=$(date)
-echo "::set-output name=time::$time"
 
 cd /usr/local/lib/node_modules/@oracle/suitecloud-cli
 npm install

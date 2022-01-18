@@ -1,11 +1,11 @@
 on:
   push:
     branches:
-      - 'main'
+      - 'sandbox'
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: Production Push
+    name: Sandbox Push
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -14,6 +14,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: Extra Step
+        run: echo "Test"
 
       - name: Hello world action step
         id: hello
