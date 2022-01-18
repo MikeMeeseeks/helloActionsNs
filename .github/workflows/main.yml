@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Production Push
     steps:
+      - name: check branch
+        run: echo ${{ gitub.ref }}
+
       - name: Checkout Repo
         uses: actions/checkout@v2
 
