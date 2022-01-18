@@ -26,7 +26,6 @@ jobs:
       - name: Extra Step
         run: echo "Test"
       - name: Hello world action step
-        id: hello
         uses: MikeMeeseeks/helloActionsNs@sandbox
       - name: Extra Step 2
         run: echo "Test 2"
