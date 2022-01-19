@@ -6,7 +6,7 @@ npm install
 
 cd "/github/workspace"
 
-if [$INPUT_BRANCH == 'main']
+if [ $INPUT_BRANCH == 'main' ] 
 then
     echo "WARNING DEPLOYING TO $INPUT_BRANCH"
 else
