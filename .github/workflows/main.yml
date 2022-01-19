@@ -17,11 +17,12 @@ jobs:
 
       - name: Hello world action step
         id: hello
-        uses: ./entrypoint.sh
+        uses: MikeMeeseeks/helloActionsNs@main
         with:
           realm: ${{ secrets.REALM }}
           token_id: ${{ secrets.TOKEN_ID }}
           token_secret: ${{ secrets.TOKEN_SECRET }}
+          branch: ${{ github.ref }}
       # Use the output from the `hello` step
       - name: Extra Step
         run: echo "Test"

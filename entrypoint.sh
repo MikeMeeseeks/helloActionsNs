@@ -6,5 +6,7 @@ npm install
 
 cd "/github/workspace"
 
+echo $INPUT_BRANCH
+
 suitecloud account:savetoken --account $INPUT_REALM --authid helloWorld --tokenid $INPUT_TOKEN_ID --tokensecret $INPUT_TOKEN_SECRET
 suitecloud project:deploy
