@@ -6,7 +6,12 @@ npm install
 
 cd "/github/workspace"
 
-echo $INPUT_BRANCH
+if [$INPUT_BRANCH == 'main']
+then
+    echo "WARNING DEPLOYING TO PRODUCTION"
+else
+    echo "Deploying to Sandbox"
+fi
 
 suitecloud account:savetoken --account $INPUT_REALM --authid helloWorld --tokenid $INPUT_TOKEN_ID --tokensecret $INPUT_TOKEN_SECRET
 suitecloud project:deploy
