@@ -22,11 +22,4 @@ jobs:
           realm: ${{ secrets.REALM }}
           token_id: ${{ secrets.TOKEN_ID }}
           token_secret: ${{ secrets.TOKEN_SECRET }}
-          branch: ${{ github.ref }}
-      # Use the output from the `hello` step
-      - name: Extra Step
-        run: echo "Test"
-      - name: Hello world action step
-        uses: MikeMeeseeks/helloActionsNs@sandbox
-      - name: Extra Step 2
-        run: echo "Test 2"
+          branch: ${{ github.ref_name	}}
