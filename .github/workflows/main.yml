@@ -17,9 +17,13 @@ jobs:
 
       - name: Run Script
         id: runscript
-        run: ./entrypoint.sh
+        uses: MikeMeeseeks/helloActionsNs@main
         with:
           realm: ${{ secrets.REALM }}
           token_id: ${{ secrets.TOKEN_ID }}
           token_secret: ${{ secrets.TOKEN_SECRET }}
           branch: ${{ github.ref_name	}}
+          
+      - name: deploy
+        id: deploy
+        run: suitecloud project:deploy
