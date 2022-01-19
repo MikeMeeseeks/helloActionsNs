@@ -8,9 +8,9 @@ cd "/github/workspace"
 
 if [$INPUT_BRANCH == 'main']
 then
-    echo "WARNING DEPLOYING TO PRODUCTION"
+    echo "WARNING DEPLOYING TO $INPUT_BRANCH"
 else
-    echo "Deploying to Sandbox"
+    echo "Deploying to $INPUT_BRANCH"
 fi
 
 suitecloud account:savetoken --account $INPUT_REALM --authid helloWorld --tokenid $INPUT_TOKEN_ID --tokensecret $INPUT_TOKEN_SECRET
