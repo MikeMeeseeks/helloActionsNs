@@ -23,7 +23,8 @@ jobs:
           token_id: ${{ secrets.TOKEN_ID }}
           token_secret: ${{ secrets.TOKEN_SECRET }}
           branch: ${{ github.ref_name	}}
-          
+
       - name: deploy
         id: deploy
+        working-directory: ./github/workspace
         run: suitecloud project:deploy
