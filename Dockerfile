@@ -8,6 +8,8 @@ RUN apk add git
 RUN apk add openjdk11
 RUN npm install -g @oracle/suitecloud-cli
 
+RUN echo "We are here"
+
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

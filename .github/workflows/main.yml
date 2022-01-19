@@ -3,9 +3,9 @@ on:
     branches:
       - 'main'
 jobs:
-  hello_world_job:
+  build:
     runs-on: ubuntu-latest
-    name: Production Push
+    name: build
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -15,8 +15,13 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Hello world action step
-        id: hello
+  validate:
+    runs-on: ubuntu-latest
+    name: validate
+    needs: [build]
+    steps:
+      - name: Shell Script
+        id: shell
         uses: MikeMeeseeks/helloActionsNs@main
         with:
           realm: ${{ secrets.REALM }}
