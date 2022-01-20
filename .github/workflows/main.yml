@@ -27,4 +27,4 @@ jobs:
 
       - name: deploy
         id: deploy
-        run: sudo ./deploy.sh
+        run: sudo deploy.sh
