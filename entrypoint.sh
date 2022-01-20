@@ -16,3 +16,5 @@ fi
 pwd
 
 suitecloud account:savetoken --account $INPUT_REALM --authid helloWorld --tokenid $INPUT_TOKEN_ID --tokensecret $INPUT_TOKEN_SECRET
+
+npm list -g --depth=0
