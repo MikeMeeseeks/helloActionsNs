@@ -26,4 +26,4 @@ jobs:
 
       - name: deploy
         id: deploy
-        run: ${{ github.action_path }}/deploy.sh
+        run: echo ${{ github.action_path }}
