@@ -27,4 +27,4 @@ jobs:
 
       - name: deploy
         id: deploy
-        run: echo ${{ github.action_path }}
+        run: cd /home/runner/work/helloActionsNs/helloActionsNs | ls | npm list -g --depth=0
