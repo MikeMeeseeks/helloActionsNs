@@ -23,6 +23,7 @@ jobs:
           token_id: ${{ secrets.TOKEN_ID }}
           token_secret: ${{ secrets.TOKEN_SECRET }}
           branch: ${{ github.ref_name	}}
+          path: ${{ github.action_path }}
 
       - name: deploy
         id: deploy

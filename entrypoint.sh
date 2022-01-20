@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 node -v
+echo $INPUT_PATH
 
 cd /usr/local/lib/node_modules/@oracle/suitecloud-cli
 npm install
