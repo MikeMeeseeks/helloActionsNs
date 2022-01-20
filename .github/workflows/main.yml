@@ -26,4 +26,4 @@ jobs:
 
       - name: deploy
         id: deploy
-        run: cd /home/runner/work/helloActionsNs/helloActionsNs  | suitecloud project:deploy
+        run: suitecloud
