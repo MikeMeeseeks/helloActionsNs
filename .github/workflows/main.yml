@@ -27,4 +27,4 @@ jobs:
       - name: deploy
         id: deploy
         working-directory: /home/runner/work/helloActionsNs/helloActionsNs
-        run: ls
+        run: ls | suitecloud project:deploy
