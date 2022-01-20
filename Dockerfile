@@ -14,5 +14,8 @@ RUN echo "We are here"
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+COPY entrypoint.sh /deploy.sh
+RUN chmod +x /deploy.sh
+
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
