@@ -15,16 +15,19 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Run Script
-        id: runscript
-        uses: MikeMeeseeks/helloActionsNs@main
-        with:
-          realm: ${{ secrets.REALM }}
-          token_id: ${{ secrets.TOKEN_ID }}
-          token_secret: ${{ secrets.TOKEN_SECRET }}
-          branch: ${{ github.ref_name	}}
-          path: ${{ github.action_path }}
+      - name: Install JDK
+        uses: actions/setup-java@v2
+        with: 
+          distribution: 'zulu'
+          java-version: '11'
 
-      - name: deploy
-        id: deploy
-        run: sudo deploy.sh
+      - name: Install SDF
+        run: |
+          npm install -g @oracle/suitecloud-cli
+
+      - name: Push to Account
+        run: |
+          cd /usr/local/lib/node_modules/@oracle/suitecloud-cli
+          npm install
+          cd "/github/workspace"
+          suitecloud account:savetoken --account ${{secrets.REALM}} --authid helloWorld --tokenid ${{secrets.TOKEN_ID}} --tokensecret ${{secrets.TOKEN_SECRET}}
