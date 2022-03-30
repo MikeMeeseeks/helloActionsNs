@@ -27,7 +27,5 @@ jobs:
       
       - name: Push to Account
         run: |
-          cd /usr/local/lib/node_modules/@oracle/suitecloud-cli
-          npm install
-          cd "/github/workspace"
+          ls
           suitecloud account:savetoken --account ${{secrets.REALM}} --authid helloWorld --tokenid ${{secrets.TOKEN_ID}} --tokensecret ${{secrets.TOKEN_SECRET}}
