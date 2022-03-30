@@ -23,7 +23,7 @@ jobs:
 
       - name: Install SDF
         run: |
-          npm install -g @oracle/suitecloud-cli
+          npm install -g --supressSuiteCloudSDKLicensePrompt @oracle/suitecloud-cli
 
       - name: Push to Account
         run: |
