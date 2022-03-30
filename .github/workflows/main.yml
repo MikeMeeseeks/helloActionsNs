@@ -25,7 +25,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
       
-      - name: Push to Account
+      - name: Setup SDF Account Token
         run: |
-          ls
           suitecloud account:savetoken --account ${{secrets.REALM}} --authid helloWorld --tokenid ${{secrets.TOKEN_ID}} --tokensecret ${{secrets.TOKEN_SECRET}}
+
+      - name: SDF Project Deploy
+        run: |
+          suitecloud project:deploy
